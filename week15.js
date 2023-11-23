@@ -32,7 +32,7 @@ for (let i = 1; i <= 10; i++) {
 //Задание 5
 // Вычислить сумму чисел от 1 до 100 и вывести значение в консоль
 let count = 0;
-for (i = 1; i <= 100; i++) {
+for (let i = 1; i <= 100; i++) {
    count = count + i;
 }
 console.log(count);
@@ -71,13 +71,13 @@ for (let i = 0; i < animals.length; i++) {
 //Задание 9 
 // Выведите символы в строке в консоль
 const str = 'Hello';
-for (letter of str) {
+for (let letter of str) {
    console.log(letter);
 }
 
 //Задание 10 
 // Выведите все элементы массива в консоль используя цикл for...of. Массив array объявлен в Задании 6
-for (ar of array) {
+for (let ar of array) {
    console.log(ar);
 }
 
@@ -109,7 +109,7 @@ console.log(resultSum);
 //Задание 13
 // Выведите длину каждого слова из массива строк в консоль
 const list = ['apple', 'banana', 'cherry'];
-for (i = 0; i < list.length; i++) {
+for (let i = 0; i < list.length; i++) {
    console.log(list[i].length);
 }
 
