@@ -1,11 +1,11 @@
-//Задание 1 ****
+//Задание 1 
 // Выведите числа от 1 до 10 в консоль
 for (let i = 1; i <= 10; i++) {
    console.log(i);
 }
 
 
-//Задание 2 ****
+//Задание 2 
 // Выведите чётные числа от 1 до 20 в консоль
 for (let i = 1; i <= 20; i++) {
    if (i % 2 == 0) {
@@ -13,7 +13,7 @@ for (let i = 1; i <= 20; i++) {
    }
 }
 
-//Задание 3 ****
+//Задание 3 
 // Выведите числа от 10 до 1 в консоль в обратном порядке
 for (let i = 10; i > 0; i--) {
    console.log(i);
@@ -21,7 +21,7 @@ for (let i = 10; i > 0; i--) {
 
 
 
-//Задание 4 ****
+//Задание 4 
 // Выведите таблицу умножения на 5 от 1 до 10
 for (let i = 1; i <= 10; i++) {
    let number = 5;
@@ -29,7 +29,7 @@ for (let i = 1; i <= 10; i++) {
 }
 
 
-//Задание 5****
+//Задание 5
 // Вычислить сумму чисел от 1 до 100 и вывести значение в консоль
 let count = 0;
 for (i = 1; i <= 100; i++) {
@@ -37,14 +37,14 @@ for (i = 1; i <= 100; i++) {
 }
 console.log(count);
 
-//Задание 6 ****
+//Задание 6 
 // Выведите все элементы массива в консоль используя цикл for
 const array = [1, 2, 3, 4, 5];
 for (let i = 0; i < array.length; i++) {
    console.log(array[i]);
 }
 
-//Задание 7****
+//Задание 7
 // Выведите сумму всех элементов массива используя цикл for
 
 const numbers = [1, 2, 3, 4, 5];
@@ -56,7 +56,7 @@ console.log(resultNum);
 
 
 
-//Задание 8****
+//Задание 8
 // Напишите цикл for, который изменяет массив животных, делая их прекрасными! Например, если есть следующий массив: let animals = ["Кот", "Рыба", "Лемур"]; цикл должен сделать его таким: ["Кот - прекрасное животное", "Рыба - прекрасное животное", "Лемур - прекрасное животное"]
 // Подсказка: вам понадобится переприсвоить значения для каждого индекса, то есть присвоить новые значения уже суще- ствующим элементам: animals[0] = animals[0] + " - прекрасное животное";
 
@@ -68,22 +68,22 @@ for (let i = 0; i < animals.length; i++) {
 
 
 
-//Задание 9 ****
+//Задание 9 
 // Выведите символы в строке в консоль
 const str = 'Hello';
 for (letter of str) {
    console.log(letter);
 }
 
-//Задание 10 ****
+//Задание 10 
 // Выведите все элементы массива в консоль используя цикл for...of. Массив array объявлен в Задании 6
-for (elem of array) {
-   console.log(elem);
+for (ar of array) {
+   console.log(ar);
 }
 
 
 
-//Задание 11****
+//Задание 11
 // Выведите каждое слово из массива строк в консоль
 // Подсказка: вам понадобится метод массивов split
 const sentences = ['Hello, world!', 'How are you?'];
@@ -96,7 +96,7 @@ for (let i = 0; i < res2.length; i++) {
 
 
 
-//Задание 12****
+//Задание 12
 // Выведите сумму всех элементов массива используя цикл for..of. Массив numbers объявлен в Задании 7
 
 let resultSum = 0;
@@ -106,7 +106,7 @@ for (let num of numbers) {
 console.log(resultSum);
 
 
-//Задание 13****
+//Задание 13
 // Выведите длину каждого слова из массива строк в консоль
 const list = ['apple', 'banana', 'cherry'];
 for (i = 0; i < list.length; i++) {
@@ -115,8 +115,15 @@ for (i = 0; i < list.length; i++) {
 
 //Задание 14
 // Преобразуйте массив каждый элемент массива words в верхний регистр
+const words = ['Hello', 'world', '!'];
+for (let i = 0; i < words.length; i++) {
+   const word = words[i];
+   const upperCaseWord = word.toUpperCase();
+   words[i] = upperCaseWord;
+}
 
-// какой масcив words???
+console.log(words);
+
 
 
 //Задание 15
@@ -126,16 +133,26 @@ const greeting = 'Hello, world!';
 let vowelCount = 0;
 const vowels = ['a', 'e', 'i', 'o', 'u'];
 
-//Задание 16 ****
+for (let letter of greeting) {
+   if (vowels.includes(letter)) {
+      vowelCount++;
+   }
+}
+console.log(vowelCount);
+
+
+//Задание 16 
 // Объедините все строки массива в одну строку с пробелами между ними
 
-const words = ['Hello', 'world', '!'];
-let newWord = words.join(' ');
+const words1 = ['Hello', 'world', '!'];
+let newWord = '';
+for (let i = 0; i < words1.length; i++) {
+   newWord += words1[i] + ' ';
+}
 console.log(newWord);
 
 
-
-//Задание 17 ****
+//Задание 17 
 // Выведите числа от 1 до 10 в консоль используя цикл while
 let num = 1;
 while (num <= 10) {
@@ -144,8 +161,7 @@ while (num <= 10) {
 }
 
 
-
-//Задание 18 ****
+//Задание 18 
 // Выведите числа от 1 до 10 в консоль в обратном порядке используя цикл while
 let num1 = 10;
 while (num1 > 0) {
@@ -157,44 +173,61 @@ while (num1 > 0) {
 // Проверьте, все ли элементы массива являются положительными числами используя цикл while
 // Подсказка: используйте директиву break
 const allNumbers = [1, 2, 3, -4, 5];
-
 let allPositive = true;
+let elemArray = 0;
+while (elemArray < allNumbers.length) {
+   if (allNumbers[elemArray] < 0) {
+      allPositive = false;
+      break;
+   }
+   elemArray++;
+}
+console.log(allPositive);
 
 //Задание 20
 // Выведите значения элементов массива до первого отрицательного числа используя цикл do...while
 const random = [2, 4, 6, -3, 8, 10];
-// do {
-//    console.log(random);
-// } while (random[i] > 0)
+let elem1 = 0;
+do {
+   console.log(random[elem1]);
+   elem1++;
+} while (random[elem1] >= 0)
 
 
 //Задание 21
 // Выведите числа от 1 до 100, пропуская числа, которые делятся на 3 используя цикл do...while
 let j = 1;
 do {
-
-   console.log(j);
-   j++
+   if (j % 3 !== 0) {
+      console.log(j);
+   }
+   j++;
 }
-while (j < 100 && j % 3 !== 0)
-
-
-
+while (j <= 100)
 
 
 //Задание 22
 // Запросить у пользователя числа, пока сумма введенных чисел не станет больше 100
+let sum = 0;
+do {
+   let number = prompt('Введите число от 1 до 100')
+   sum += +number;
+   if (sum > 100) {
+      alert('сумма введенных числе больше 100')
+      break;
+   }
+
+} while (sum <= 100)
 
 
 
-
-//Задание 23 ****
+//Задание 23 
 // Напишите функцию, которая изменит фоновый цвет всех элементов <h4> на странице на синий цвет
-let allHfour = document.querySelectorAll('h4');
+let allHfour = document.getElementsByTagName('h4');
 console.log(allHfour);
 function changeColor() {
-   for (all of allHfour) {
-      all.classList.add('blue');
+   for (let i = 0; i < allHfour.length; i++) {
+      allHfour[i].style.color = "#3f8efc";
    }
 }
 changeColor()
@@ -204,6 +237,21 @@ changeColor()
 //Задание 24
 // Напишите генератор случайных строк до 6 символов
 // Подсказка: используйте методы объекта Math и длину массива alphabet
-let alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
-let randomString = '';
+
+
+function generateString() {
+   let alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+   let randomString = '';
+   for (let i = 0; i < 6; i++) {
+      randomString += alphabet[Math.floor(Math.random() * alphabet.length)];
+   }
+   return randomString;
+}
+let resultString = generateString()
+let resultStringTwo = generateString()
+let resultStringThree = generateString()
+
+console.log(resultString);
+console.log(resultStringTwo);
+console.log(resultStringThree);
 
